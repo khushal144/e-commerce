@@ -6,6 +6,10 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
   { ignores: ['dist'] },
+  {build: {
+    rollupOptions: {
+      external: ['react-icons/fi']
+    }}},
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
