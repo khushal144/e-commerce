@@ -1,0 +1,29 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 3px solid #f3f3f3;
+    padding: 20px;
+    z-index: 999;
+    margin-left: 2rem;
+}
+input{
+    padding: 12px 20px;
+    border: none;
+    background: #f7f6f6;
+    outline: none;
+    margin-right: 20px;
+    border-radius: 5px;
+    position: relative;
+    width: 14rem;
+}
+.nav-icons{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #494949;
+}
+a:not(:nth-of-type(2n-1)){
+    /* margin-left: 2rem; */
+    margin: 0 2rem;
+}
