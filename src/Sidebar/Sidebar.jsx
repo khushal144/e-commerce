@@ -12,9 +12,11 @@ function Sidebar({handleChange,navtoggle}) {
         <div className="logo-container">
             <h1><BsCart4 />{navtoggle}</h1>
         </div>
+        <div style={{overflow:'hidden'}}>
         <Category handleChange={handleChange} />
         <Prices handleChange={handleChange} />
         <Colors handleChange={handleChange} />
+        </div>
       </section>
     </>
   )
