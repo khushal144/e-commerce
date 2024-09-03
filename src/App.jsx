@@ -10,6 +10,7 @@ import products from './db/data'
 import Card from "./Components/Card"
 
 function App() {
+  const [navtoggle,setNavtoggle]=useState(false)
   const [selectedCategory, setSelectedCategory] = useState(null)
 
   //input filter
@@ -28,7 +29,10 @@ function App() {
 
   //Buttons filter
   const handleClick = event => {
-    setSelectedCategory(event.target.value)
+    if(event.target.textContent!='All Products')
+    setSelectedCategory(event.target.textContent)
+    else
+    setSelectedCategory('')
   }
 
   function filteredData(products, selected, query) {
@@ -62,8 +66,8 @@ function App() {
   const result=filteredData(products,selectedCategory,query)
   return (
     <>
-      <Sidebar handleChange={handleChange} />
-      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Sidebar handleChange={handleChange} navtoggle={navtoggle}/>
+      <Navigation query={query} handleInputChange={handleInputChange} navtoggle={navtoggle} setNavtoggle={setNavtoggle}/>
       <Recommended handleClick={handleClick} />
       <Products result={result} />
     </>

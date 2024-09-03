@@ -4,15 +4,22 @@
     margin-bottom: 20px;
 }
 .sidebar{
-    width: 15%;
+    width: 10rem;
     position: fixed;
     height: 100%;
-    left: 1rem;
+    background-color: #fff;
     border-right: 2px solid #e5e5e5;
     z-index: 3;
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: all .4s ease-in-out;
+    @media screen and (max-width:1100px) {
+        transform: translateX(-100%);
+    }
+    &.nav-toggle{
+        transform: translateX(0);
+    }
 }
 .logo-container{
     margin-bottom: 4rem;

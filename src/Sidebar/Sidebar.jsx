@@ -5,12 +5,12 @@ import Category from './Category/Category'
 import Colors from './Colors/Colors'
 import Prices from './Prices/Prices'
 
-function Sidebar({handleChange}) {
+function Sidebar({handleChange,navtoggle}) {
   return (
     <>
-      <section className="sidebar">
+      <section className={`${navtoggle?'sidebar nav-toggle':'sidebar'} `}>
         <div className="logo-container">
-            <h1><BsCart4 /></h1>
+            <h1><BsCart4 />{navtoggle}</h1>
         </div>
         <Category handleChange={handleChange} />
         <Prices handleChange={handleChange} />

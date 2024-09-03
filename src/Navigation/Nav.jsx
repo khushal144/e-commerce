@@ -1,8 +1,9 @@
 import React from 'react'
 import './nav.css'
 import { FiHeart } from 'react-icons/fi';
+import { FiMenu } from "react-icons/fi";
 import {AiOutlineShoppingCart,AiOutlineUserAdd} from 'react-icons/ai'
-function Nav({handleInputChange}) {
+function Nav({handleInputChange,navtoggle,setNavtoggle}) {
   return (
     <nav>
       <div className="nav-container">
@@ -22,6 +23,9 @@ function Nav({handleInputChange}) {
         </a>
         <a href='#'>
           <AiOutlineUserAdd className='nav-icons' />
+        </a>
+        <a href='#' onClick={()=>setNavtoggle(!navtoggle)}>
+          <FiMenu className='nav-icons m'/>
         </a>
       </div>
     </nav>
